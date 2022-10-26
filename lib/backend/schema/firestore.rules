@@ -1,0 +1,53 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /TrendingNews/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /votes/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /comments/{document} {
+      allow create: if true;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /EconomyNews/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /EnvironmentNews/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+
+    match /SocietyNews/{document} {
+      allow create: if request.auth != null;
+      allow read: if true;
+      allow write: if false;
+      allow delete: if false;
+    }
+  }
+}
