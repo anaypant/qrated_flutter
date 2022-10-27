@@ -160,6 +160,7 @@ class _EconomyCommentsWidgetState extends State<EconomyCommentsWidget> {
                               true,
                             )
                           ]),
+                          'commentCt': FieldValue.increment(1),
                         };
                         await widget.ref!.reference
                             .update(economyNewsUpdateData);

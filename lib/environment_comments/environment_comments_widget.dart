@@ -161,6 +161,7 @@ class _EnvironmentCommentsWidgetState extends State<EnvironmentCommentsWidget> {
                               true,
                             )
                           ]),
+                          'commentCt': FieldValue.increment(1),
                         };
                         await widget.ref!.reference
                             .update(environmentNewsUpdateData);

@@ -1,3 +1,76 @@
 {
-  "indexes": []
+  "indexes": [
+    {
+      "collectionGroup": "TrendingNews",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "upVoteCt",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "downVoteCt",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "publishedAt",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "EconomyNews",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "upVoteCt",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "downVoteCt",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "publishedAt",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "EnvironmentNews",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "upVoteCt",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "downVoteCt",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "publishedAt",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "SocietyNews",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "upVoteCt",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "downVoteCt",
+          "order": "DESCENDING"
+        },
+        {
+          "fieldPath": "publishedAt",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ]
 }

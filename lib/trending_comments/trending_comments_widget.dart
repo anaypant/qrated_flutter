@@ -160,6 +160,7 @@ class _TrendingCommentsWidgetState extends State<TrendingCommentsWidget> {
                               true,
                             )
                           ]),
+                          'commentCt': FieldValue.increment(1),
                         };
                         await widget.ref!.reference
                             .update(trendingNewsUpdateData);

@@ -160,6 +160,7 @@ class _SocietyCommentsWidgetState extends State<SocietyCommentsWidget> {
                               true,
                             )
                           ]),
+                          'commentCt': FieldValue.increment(1),
                         };
                         await widget.ref!.reference
                             .update(societyNewsUpdateData);
