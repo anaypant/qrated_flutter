@@ -4,7 +4,7 @@
 > "Be the change that you wish to see in the world" - Mahatama Gandhi 
 
 # Website 
-[https://anaypant.github.io/bethechange/](https://anaypant.github.io/bethechange/)
+[https://qrated.weblium.site/](https://qrated.weblium.site/)
 
 # Design 
 
@@ -17,10 +17,6 @@
     * Downvote article you don't like
     * Add comments
     * Viewers see sorted list based on upvotes (most popular articles), downvotes (least liked) and published date.
-
-  
-### Website
-https://qrated.weblium.site/
 
 ### Copyright
 Creative Commons License
