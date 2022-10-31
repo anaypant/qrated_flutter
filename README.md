@@ -1,5 +1,5 @@
 # Qrated - News for Teens
-> "Be the change that you wish to see in the world" - Mahatama Gandhi 
+> "Be the change that you wish to see in the world" - Mahatma Gandhi 
 
 # Website 
 [https://qrated.weblium.site/](https://qrated.weblium.site/)
