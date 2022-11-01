@@ -191,7 +191,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               child: Card(
                                                 clipBehavior:
                                                     Clip.antiAliasWithSaveLayer,
-                                                color: Color(0xFFABF8FF),
+                                                color: Color(0xFF7AD1DD),
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(10),
@@ -203,7 +203,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     Text(
                                                       listViewTrendingNewsRecord
                                                           .title!,
-                                                      maxLines: 2,
+                                                      maxLines: 3,
                                                       style: FlutterFlowTheme
                                                               .of(context)
                                                           .bodyText1
@@ -232,7 +232,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         0),
                                                             child: Text(
                                                               listViewTrendingNewsRecord
-                                                                  .description!
+                                                                  .author!
                                                                   .maybeHandleOverflow(
                                                                 maxChars: 150,
                                                                 replacement:
@@ -557,7 +557,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                     0, 5, 0, 5),
                                                         child: Text(
                                                           listViewTrendingNewsRecord
-                                                              .author!,
+                                                              .description!,
                                                           textAlign:
                                                               TextAlign.center,
                                                           style: FlutterFlowTheme
@@ -568,6 +568,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                     'Poppins',
                                                                 color: Colors
                                                                     .black,
+                                                                fontSize: 11,
                                                               ),
                                                         ),
                                                       ),
@@ -632,7 +633,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         child: Card(
                                           clipBehavior:
                                               Clip.antiAliasWithSaveLayer,
-                                          color: Color(0xFFABF8FF),
+                                          color: Color(0xFF7AD1DD),
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(10),
@@ -643,7 +644,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               Text(
                                                 listViewEconomyNewsRecord
                                                     .title!,
-                                                maxLines: 2,
+                                                maxLines: 3,
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -667,7 +668,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   7, 0, 0, 0),
                                                       child: Text(
                                                         listViewEconomyNewsRecord
-                                                            .description!
+                                                            .author!
                                                             .maybeHandleOverflow(
                                                           maxChars: 150,
                                                           replacement: '…',
@@ -964,7 +965,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       .fromSTEB(0, 5, 0, 5),
                                                   child: Text(
                                                     listViewEconomyNewsRecord
-                                                        .author!,
+                                                        .description!,
                                                     textAlign: TextAlign.center,
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -972,6 +973,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                         .override(
                                                           fontFamily: 'Poppins',
                                                           color: Colors.black,
+                                                          fontSize: 11,
                                                         ),
                                                   ),
                                                 ),
@@ -1034,7 +1036,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         child: Card(
                                           clipBehavior:
                                               Clip.antiAliasWithSaveLayer,
-                                          color: Color(0xFFABF8FF),
+                                          color: Color(0xFF7AD1DD),
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(10),
@@ -1045,7 +1047,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               Text(
                                                 listViewEnvironmentNewsRecord
                                                     .title!,
-                                                maxLines: 2,
+                                                maxLines: 3,
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -1069,7 +1071,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   7, 0, 0, 0),
                                                       child: Text(
                                                         listViewEnvironmentNewsRecord
-                                                            .description!
+                                                            .author!
                                                             .maybeHandleOverflow(
                                                           maxChars: 150,
                                                           replacement: '…',
@@ -1366,7 +1368,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       .fromSTEB(0, 5, 0, 5),
                                                   child: Text(
                                                     listViewEnvironmentNewsRecord
-                                                        .author!,
+                                                        .description!,
                                                     textAlign: TextAlign.center,
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -1374,6 +1376,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                         .override(
                                                           fontFamily: 'Poppins',
                                                           color: Colors.black,
+                                                          fontSize: 11,
                                                         ),
                                                   ),
                                                 ),
@@ -1435,7 +1438,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         child: Card(
                                           clipBehavior:
                                               Clip.antiAliasWithSaveLayer,
-                                          color: Color(0xFFABF8FF),
+                                          color: Color(0xFF7AD1DD),
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(10),
@@ -1446,7 +1449,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               Text(
                                                 listViewSocietyNewsRecord
                                                     .title!,
-                                                maxLines: 2,
+                                                maxLines: 3,
                                                 style:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyText1
@@ -1470,7 +1473,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   7, 0, 0, 0),
                                                       child: Text(
                                                         listViewSocietyNewsRecord
-                                                            .description!
+                                                            .author!
                                                             .maybeHandleOverflow(
                                                           maxChars: 150,
                                                           replacement: '…',
@@ -1767,7 +1770,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       .fromSTEB(0, 5, 0, 5),
                                                   child: Text(
                                                     listViewSocietyNewsRecord
-                                                        .author!,
+                                                        .description!,
                                                     textAlign: TextAlign.center,
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -1775,6 +1778,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                         .override(
                                                           fontFamily: 'Poppins',
                                                           color: Colors.black,
+                                                          fontSize: 11,
                                                         ),
                                                   ),
                                                 ),
