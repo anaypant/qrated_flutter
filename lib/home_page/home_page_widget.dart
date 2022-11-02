@@ -200,18 +200,27 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   mainAxisSize:
                                                       MainAxisSize.max,
                                                   children: [
-                                                    Text(
-                                                      listViewTrendingNewsRecord
-                                                          .title!,
-                                                      maxLines: 3,
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyText1
-                                                          .override(
-                                                            fontFamily:
-                                                                'Poppins',
-                                                            color: Colors.black,
-                                                          ),
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  5, 0, 5, 0),
+                                                      child: Text(
+                                                        listViewTrendingNewsRecord
+                                                            .title!,
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                        maxLines: 3,
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyText1
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Poppins',
+                                                              color:
+                                                                  Colors.black,
+                                                            ),
+                                                      ),
                                                     ),
                                                     Row(
                                                       mainAxisSize:
@@ -220,63 +229,23 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           MainAxisAlignment
                                                               .spaceEvenly,
                                                       children: [
-                                                        Expanded(
-                                                          flex: 2,
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        7,
-                                                                        0,
-                                                                        0,
-                                                                        0),
-                                                            child: Text(
-                                                              listViewTrendingNewsRecord
-                                                                  .author!
-                                                                  .maybeHandleOverflow(
-                                                                maxChars: 150,
-                                                                replacement:
-                                                                    '…',
-                                                              ),
-                                                              maxLines: 6,
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyText1
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Poppins',
-                                                                    color: Colors
-                                                                        .black,
-                                                                    fontSize:
-                                                                        11,
-                                                                  ),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                        Expanded(
-                                                          flex: 3,
-                                                          child: Padding(
-                                                            padding:
-                                                                EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        0,
-                                                                        10,
-                                                                        0,
-                                                                        0),
-                                                            child:
-                                                                Image.network(
-                                                              listViewTrendingNewsRecord
-                                                                  .urlToImage!,
-                                                              width: 150,
-                                                              height: 100,
-                                                              fit: BoxFit.cover,
-                                                            ),
+                                                        Padding(
+                                                          padding:
+                                                              EdgeInsetsDirectional
+                                                                  .fromSTEB(10,
+                                                                      10, 0, 0),
+                                                          child: Image.network(
+                                                            listViewTrendingNewsRecord
+                                                                .urlToImage!,
+                                                            width: 250,
+                                                            height: 200,
+                                                            fit: BoxFit.cover,
                                                           ),
                                                         ),
                                                         Padding(
                                                           padding:
                                                               EdgeInsetsDirectional
-                                                                  .fromSTEB(5,
+                                                                  .fromSTEB(15,
                                                                       0, 0, 0),
                                                           child: Column(
                                                             mainAxisSize:
@@ -546,32 +515,45 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                         ),
                                                       ],
                                                     ),
-                                                    Align(
-                                                      alignment:
-                                                          AlignmentDirectional(
-                                                              -0.95, 0),
-                                                      child: Padding(
-                                                        padding:
-                                                            EdgeInsetsDirectional
-                                                                .fromSTEB(
-                                                                    0, 5, 0, 5),
-                                                        child: Text(
-                                                          listViewTrendingNewsRecord
-                                                              .description!,
-                                                          textAlign:
-                                                              TextAlign.center,
-                                                          style: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .bodyText1
-                                                              .override(
-                                                                fontFamily:
-                                                                    'Poppins',
-                                                                color: Colors
-                                                                    .black,
-                                                                fontSize: 11,
-                                                              ),
-                                                        ),
+                                                    Padding(
+                                                      padding:
+                                                          EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  5, 5, 5, 5),
+                                                      child: Text(
+                                                        listViewTrendingNewsRecord
+                                                            .description!,
+                                                        textAlign:
+                                                            TextAlign.start,
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyText1
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Poppins',
+                                                              color:
+                                                                  Colors.black,
+                                                              fontSize: 11,
+                                                            ),
                                                       ),
+                                                    ),
+                                                    Text(
+                                                      listViewTrendingNewsRecord
+                                                          .author!
+                                                          .maybeHandleOverflow(
+                                                        maxChars: 150,
+                                                        replacement: '…',
+                                                      ),
+                                                      maxLines: 6,
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyText1
+                                                          .override(
+                                                            fontFamily:
+                                                                'Poppins',
+                                                            color: Colors.black,
+                                                            fontSize: 9,
+                                                          ),
                                                     ),
                                                   ],
                                                 ),
@@ -641,17 +623,22 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              Text(
-                                                listViewEconomyNewsRecord
-                                                    .title!,
-                                                maxLines: 3,
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily: 'Poppins',
-                                                          color: Colors.black,
-                                                        ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(5, 0, 5, 0),
+                                                child: Text(
+                                                  listViewEconomyNewsRecord
+                                                      .title!,
+                                                  textAlign: TextAlign.start,
+                                                  maxLines: 3,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color: Colors.black,
+                                                      ),
+                                                ),
                                               ),
                                               Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -659,55 +646,24 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     MainAxisAlignment
                                                         .spaceEvenly,
                                                 children: [
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  7, 0, 0, 0),
-                                                      child: Text(
-                                                        listViewEconomyNewsRecord
-                                                            .author!
-                                                            .maybeHandleOverflow(
-                                                          maxChars: 150,
-                                                          replacement: '…',
-                                                        ),
-                                                        maxLines: 6,
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyText1
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Poppins',
-                                                              color:
-                                                                  Colors.black,
-                                                              fontSize: 11,
-                                                            ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Expanded(
-                                                    flex: 3,
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0, 10, 0, 0),
-                                                      child: Image.network(
-                                                        listViewEconomyNewsRecord
-                                                            .urlToImage!,
-                                                        width: 150,
-                                                        height: 100,
-                                                        fit: BoxFit.cover,
-                                                      ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                10, 10, 0, 0),
+                                                    child: Image.network(
+                                                      listViewEconomyNewsRecord
+                                                          .urlToImage!,
+                                                      width: 250,
+                                                      height: 200,
+                                                      fit: BoxFit.cover,
                                                     ),
                                                   ),
                                                   Padding(
                                                     padding:
                                                         EdgeInsetsDirectional
                                                             .fromSTEB(
-                                                                5, 0, 0, 0),
+                                                                15, 0, 0, 0),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -957,25 +913,42 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   ),
                                                 ],
                                               ),
-                                              Align(
-                                                alignment: AlignmentDirectional(
-                                                    -0.95, 0),
-                                                child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(0, 5, 0, 5),
-                                                  child: Text(
-                                                    listViewEconomyNewsRecord
-                                                        .description!,
-                                                    textAlign: TextAlign.center,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily: 'Poppins',
-                                                          color: Colors.black,
-                                                          fontSize: 11,
-                                                        ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(5, 5, 5, 5),
+                                                child: Text(
+                                                  listViewEconomyNewsRecord
+                                                      .description!,
+                                                  textAlign: TextAlign.start,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color: Colors.black,
+                                                        fontSize: 11,
+                                                      ),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(0, 5, 0, 0),
+                                                child: Text(
+                                                  listViewEconomyNewsRecord
+                                                      .author!
+                                                      .maybeHandleOverflow(
+                                                    maxChars: 150,
+                                                    replacement: '…',
                                                   ),
+                                                  maxLines: 6,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color: Colors.black,
+                                                        fontSize: 9,
+                                                      ),
                                                 ),
                                               ),
                                             ],
@@ -1044,17 +1017,22 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              Text(
-                                                listViewEnvironmentNewsRecord
-                                                    .title!,
-                                                maxLines: 3,
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily: 'Poppins',
-                                                          color: Colors.black,
-                                                        ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(5, 0, 5, 0),
+                                                child: Text(
+                                                  listViewEnvironmentNewsRecord
+                                                      .title!,
+                                                  textAlign: TextAlign.start,
+                                                  maxLines: 3,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color: Colors.black,
+                                                      ),
+                                                ),
                                               ),
                                               Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -1062,55 +1040,24 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     MainAxisAlignment
                                                         .spaceEvenly,
                                                 children: [
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  7, 0, 0, 0),
-                                                      child: Text(
-                                                        listViewEnvironmentNewsRecord
-                                                            .author!
-                                                            .maybeHandleOverflow(
-                                                          maxChars: 150,
-                                                          replacement: '…',
-                                                        ),
-                                                        maxLines: 6,
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyText1
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Poppins',
-                                                              color:
-                                                                  Colors.black,
-                                                              fontSize: 11,
-                                                            ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Expanded(
-                                                    flex: 3,
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0, 10, 0, 0),
-                                                      child: Image.network(
-                                                        listViewEnvironmentNewsRecord
-                                                            .urlToImage!,
-                                                        width: 150,
-                                                        height: 100,
-                                                        fit: BoxFit.cover,
-                                                      ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                10, 10, 0, 0),
+                                                    child: Image.network(
+                                                      listViewEnvironmentNewsRecord
+                                                          .urlToImage!,
+                                                      width: 250,
+                                                      height: 200,
+                                                      fit: BoxFit.cover,
                                                     ),
                                                   ),
                                                   Padding(
                                                     padding:
                                                         EdgeInsetsDirectional
                                                             .fromSTEB(
-                                                                5, 0, 0, 0),
+                                                                15, 0, 0, 0),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -1360,25 +1307,42 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   ),
                                                 ],
                                               ),
-                                              Align(
-                                                alignment: AlignmentDirectional(
-                                                    -0.95, 0),
-                                                child: Padding(
-                                                  padding: EdgeInsetsDirectional
-                                                      .fromSTEB(0, 5, 0, 5),
-                                                  child: Text(
-                                                    listViewEnvironmentNewsRecord
-                                                        .description!,
-                                                    textAlign: TextAlign.center,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily: 'Poppins',
-                                                          color: Colors.black,
-                                                          fontSize: 11,
-                                                        ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(5, 5, 5, 5),
+                                                child: Text(
+                                                  listViewEnvironmentNewsRecord
+                                                      .description!,
+                                                  textAlign: TextAlign.start,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color: Colors.black,
+                                                        fontSize: 11,
+                                                      ),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(7, 5, 0, 0),
+                                                child: Text(
+                                                  listViewEnvironmentNewsRecord
+                                                      .author!
+                                                      .maybeHandleOverflow(
+                                                    maxChars: 150,
+                                                    replacement: '…',
                                                   ),
+                                                  maxLines: 6,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color: Colors.black,
+                                                        fontSize: 9,
+                                                      ),
                                                 ),
                                               ),
                                             ],
@@ -1446,17 +1410,22 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
-                                              Text(
-                                                listViewSocietyNewsRecord
-                                                    .title!,
-                                                maxLines: 3,
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1
-                                                        .override(
-                                                          fontFamily: 'Poppins',
-                                                          color: Colors.black,
-                                                        ),
+                                              Padding(
+                                                padding: EdgeInsetsDirectional
+                                                    .fromSTEB(5, 0, 5, 0),
+                                                child: Text(
+                                                  listViewSocietyNewsRecord
+                                                      .title!,
+                                                  textAlign: TextAlign.start,
+                                                  maxLines: 3,
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyText1
+                                                      .override(
+                                                        fontFamily: 'Poppins',
+                                                        color: Colors.black,
+                                                      ),
+                                                ),
                                               ),
                                               Row(
                                                 mainAxisSize: MainAxisSize.max,
@@ -1464,55 +1433,24 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     MainAxisAlignment
                                                         .spaceEvenly,
                                                 children: [
-                                                  Expanded(
-                                                    flex: 2,
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  7, 0, 0, 0),
-                                                      child: Text(
-                                                        listViewSocietyNewsRecord
-                                                            .author!
-                                                            .maybeHandleOverflow(
-                                                          maxChars: 150,
-                                                          replacement: '…',
-                                                        ),
-                                                        maxLines: 6,
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyText1
-                                                            .override(
-                                                              fontFamily:
-                                                                  'Poppins',
-                                                              color:
-                                                                  Colors.black,
-                                                              fontSize: 11,
-                                                            ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Expanded(
-                                                    flex: 3,
-                                                    child: Padding(
-                                                      padding:
-                                                          EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0, 10, 0, 0),
-                                                      child: Image.network(
-                                                        listViewSocietyNewsRecord
-                                                            .urlToImage!,
-                                                        width: 150,
-                                                        height: 100,
-                                                        fit: BoxFit.cover,
-                                                      ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                10, 10, 0, 0),
+                                                    child: Image.network(
+                                                      listViewSocietyNewsRecord
+                                                          .urlToImage!,
+                                                      width: 250,
+                                                      height: 200,
+                                                      fit: BoxFit.cover,
                                                     ),
                                                   ),
                                                   Padding(
                                                     padding:
                                                         EdgeInsetsDirectional
                                                             .fromSTEB(
-                                                                5, 0, 0, 0),
+                                                                15, 0, 0, 0),
                                                     child: Column(
                                                       mainAxisSize:
                                                           MainAxisSize.max,
@@ -1763,15 +1701,15 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                 ],
                                               ),
                                               Align(
-                                                alignment: AlignmentDirectional(
-                                                    -0.95, 0),
+                                                alignment:
+                                                    AlignmentDirectional(0, 0),
                                                 child: Padding(
                                                   padding: EdgeInsetsDirectional
-                                                      .fromSTEB(0, 5, 0, 5),
+                                                      .fromSTEB(5, 5, 5, 5),
                                                   child: Text(
                                                     listViewSocietyNewsRecord
                                                         .description!,
-                                                    textAlign: TextAlign.center,
+                                                    textAlign: TextAlign.start,
                                                     style: FlutterFlowTheme.of(
                                                             context)
                                                         .bodyText1
@@ -1779,6 +1717,31 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           fontFamily: 'Poppins',
                                                           color: Colors.black,
                                                           fontSize: 11,
+                                                        ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Align(
+                                                alignment:
+                                                    AlignmentDirectional(0, 0),
+                                                child: Padding(
+                                                  padding: EdgeInsetsDirectional
+                                                      .fromSTEB(7, 5, 0, 0),
+                                                  child: Text(
+                                                    listViewSocietyNewsRecord
+                                                        .author!
+                                                        .maybeHandleOverflow(
+                                                      maxChars: 150,
+                                                      replacement: '…',
+                                                    ),
+                                                    maxLines: 6,
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyText1
+                                                        .override(
+                                                          fontFamily: 'Poppins',
+                                                          color: Colors.black,
+                                                          fontSize: 9,
                                                         ),
                                                   ),
                                                 ),
