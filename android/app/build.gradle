@@ -1,7 +1,8 @@
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
-int flutterVersion = "8" // 11-2-2022 20:40
-int new3 = 3;
+int flutterVersion = "4" // 11-2-2022 00:32
+
+
 
 if (localPropertiesFile.exists()) {
     localPropertiesFile.withReader('UTF-8') { reader ->
