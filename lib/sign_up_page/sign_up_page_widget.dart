@@ -22,6 +22,7 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
   late bool pwdFieldVisibility;
   TextEditingController? userFieldController;
   TextEditingController? emailFieldController;
+  bool? checkboxValue;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -358,54 +359,69 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
                 child: FFButtonWidget(
                   onPressed: () async {
-                    GoRouter.of(context).prepareAuthEvent();
-                    if (confPwdFieldController?.text !=
-                        pwdFieldController?.text) {
+                    if (checkboxValue == true) {
+                      GoRouter.of(context).prepareAuthEvent();
+                      if (confPwdFieldController?.text !=
+                          pwdFieldController?.text) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(
+                              'Passwords don\'t match!',
+                            ),
+                          ),
+                        );
+                        return;
+                      }
+
+                      final user = await createAccountWithEmail(
+                        context,
+                        emailFieldController!.text,
+                        confPwdFieldController!.text,
+                      );
+                      if (user == null) {
+                        return;
+                      }
+
+                      final usersCreateData = createUsersRecordData(
+                        displayName: valueOrDefault<String>(
+                          userFieldController!.text,
+                          'null',
+                        ),
+                        email: '',
+                      );
+                      await UsersRecord.collection
+                          .doc(user.uid)
+                          .update(usersCreateData);
+
+                      await sendEmailVerification();
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text(
-                            'Passwords don\'t match!',
+                            'Check email for verification (spam).',
+                            style: TextStyle(
+                              color: FlutterFlowTheme.of(context).primaryText,
+                            ),
                           ),
+                          duration: Duration(milliseconds: 4000),
+                          backgroundColor: Color(0x00000000),
                         ),
                       );
-                      return;
-                    }
 
-                    final user = await createAccountWithEmail(
-                      context,
-                      emailFieldController!.text,
-                      confPwdFieldController!.text,
-                    );
-                    if (user == null) {
-                      return;
-                    }
-
-                    final usersCreateData = createUsersRecordData(
-                      displayName: valueOrDefault<String>(
-                        userFieldController!.text,
-                        'null',
-                      ),
-                      email: '',
-                    );
-                    await UsersRecord.collection
-                        .doc(user.uid)
-                        .update(usersCreateData);
-
-                    await sendEmailVerification();
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text(
-                          'Check email for verification (spam).',
-                          style: TextStyle(
-                            color: FlutterFlowTheme.of(context).primaryText,
+                      context.pushNamedAuth('LoginPage', mounted);
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(
+                            'Please agree with the Terms and Conditions.',
+                            style: TextStyle(
+                              color: FlutterFlowTheme.of(context).primaryText,
+                            ),
                           ),
+                          duration: Duration(milliseconds: 4000),
+                          backgroundColor: Color(0x00000000),
                         ),
-                        duration: Duration(milliseconds: 4000),
-                        backgroundColor: Color(0x00000000),
-                      ),
-                    );
-
-                    context.pushNamedAuth('LoginPage', mounted);
+                      );
+                    }
                   },
                   text: 'Sign up',
                   options: FFButtonOptions(
@@ -424,8 +440,57 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                   ),
                 ),
               ),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
+                    child: Theme(
+                      data: ThemeData(
+                        checkboxTheme: CheckboxThemeData(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(0),
+                          ),
+                        ),
+                        unselectedWidgetColor:
+                            FlutterFlowTheme.of(context).alternate,
+                      ),
+                      child: Checkbox(
+                        value: checkboxValue ??= false,
+                        onChanged: (newValue) async {
+                          setState(() => checkboxValue = newValue!);
+                        },
+                        activeColor: FlutterFlowTheme.of(context).primaryColor,
+                      ),
+                    ),
+                  ),
+                  SelectionArea(
+                      child: Text(
+                    'I agree to the Qrated',
+                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                          fontFamily: 'Poppins',
+                          color: Colors.black,
+                        ),
+                  )),
+                  InkWell(
+                    onTap: () async {
+                      await launchURL(
+                          'https://github.com/anaypant/qrated_flutter');
+                    },
+                    child: SelectionArea(
+                        child: Text(
+                      ' Terms and Services',
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                            fontFamily: 'Poppins',
+                            color: FlutterFlowTheme.of(context).primaryColor,
+                            fontWeight: FontWeight.bold,
+                          ),
+                    )),
+                  ),
+                ],
+              ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 60, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
                 child: Text(
                   'Already Have an Account?',
                   style: FlutterFlowTheme.of(context).bodyText1,

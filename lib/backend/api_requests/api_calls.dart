@@ -30,6 +30,7 @@ class EconomyCallCall {
         'limit': "32",
       },
       returnBody: true,
+      cache: false,
     );
   }
 
@@ -84,6 +85,7 @@ class SocietyCallCall {
         'limit': "32",
       },
       returnBody: true,
+      cache: false,
     );
   }
 
@@ -139,6 +141,7 @@ class TrendingCallCall {
         'limit': "32",
       },
       returnBody: true,
+      cache: false,
     );
   }
 
@@ -194,6 +197,7 @@ class EnvironmentCallCall {
         'limit': "32",
       },
       returnBody: true,
+      cache: false,
     );
   }
 
@@ -243,6 +247,7 @@ class LocalCallCall {
       headers: {},
       params: {},
       returnBody: true,
+      cache: false,
     );
   }
 }
