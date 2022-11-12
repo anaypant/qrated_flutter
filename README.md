@@ -1,8 +1,11 @@
-# Qrated
+# Qrated - News for Youth
 
-A new Flutter project.
 
-## Getting Started
+# Terms of Service
+By creating an account you agree to qrated [Privacy Policy](https://www.freeprivacypolicy.com/live/f3d2914e-a78c-43a0-a01e-77afa03dccd5) and Terms of Services listed below.
+
+# Technical Details
+## Getting Started on Flutter
 
 FlutterFlow projects are built to run on the Flutter _stable_ release.
 
