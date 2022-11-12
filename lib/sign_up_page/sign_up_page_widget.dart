@@ -472,20 +472,35 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                           color: Colors.black,
                         ),
                   )),
-                  InkWell(
-                    onTap: () async {
-                      await launchURL(
-                          'https://github.com/anaypant/qrated_flutter');
-                    },
-                    child: SelectionArea(
-                        child: Text(
-                      ' Terms and Services',
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Poppins',
-                            color: FlutterFlowTheme.of(context).primaryColor,
-                            fontWeight: FontWeight.bold,
+                  Align(
+                    alignment: AlignmentDirectional(0, 0),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                      child: FFButtonWidget(
+                        onPressed: () async {
+                          await launchURL(
+                              'https://github.com/anaypant/qrated_flutter/blob/master/README.md');
+                        },
+                        text: 'Terms of Services',
+                        options: FFButtonOptions(
+                          width: 140,
+                          height: 20,
+                          color: FlutterFlowTheme.of(context).primaryColor,
+                          textStyle:
+                              FlutterFlowTheme.of(context).subtitle2.override(
+                                    fontFamily: 'Poppins',
+                                    color: Colors.white,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                          borderSide: BorderSide(
+                            color: Colors.transparent,
+                            width: 1,
                           ),
-                    )),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
