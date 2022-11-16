@@ -191,7 +191,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                               child: Card(
                                                 clipBehavior:
                                                     Clip.antiAliasWithSaveLayer,
-                                                color: Color(0xFF7AD1DD),
+                                                color: Color(0xFFAEF4FF),
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius:
                                                       BorderRadius.circular(10),
@@ -615,7 +615,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         child: Card(
                                           clipBehavior:
                                               Clip.antiAliasWithSaveLayer,
-                                          color: Color(0xFF7AD1DD),
+                                          color: Color(0xFFAEF4FF),
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(10),
@@ -1009,7 +1009,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         child: Card(
                                           clipBehavior:
                                               Clip.antiAliasWithSaveLayer,
-                                          color: Color(0xFF7AD1DD),
+                                          color: Color(0xFFAEF4FF),
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(10),
@@ -1402,7 +1402,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         child: Card(
                                           clipBehavior:
                                               Clip.antiAliasWithSaveLayer,
-                                          color: Color(0xFF7AD1DD),
+                                          color: Color(0xFFAEF4FF),
                                           shape: RoundedRectangleBorder(
                                             borderRadius:
                                                 BorderRadius.circular(10),
