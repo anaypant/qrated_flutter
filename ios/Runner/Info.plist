@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CADisableMinimumFrameDurationOnPhone</key>
-	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -18,56 +16,72 @@
 	<string>Qrated</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+
 	<key>CFBundleShortVersionString</key>
 	<string>$(FLUTTER_BUILD_NAME)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
 	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>com.googleusercontent.apps.817896276476-iohgpr5722lrq4368aocm1k2rv60jat0</string>
-			</array>
-		</dict>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>qrated.com</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>qrated</string>
-			</array>
-		</dict>
-	</array>
+        <dict>
+            <key>CFBundleTypeRole</key>
+            <string>Editor</string>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>com.googleusercontent.apps.817896276476-iohgpr5722lrq4368aocm1k2rv60jat0</string>
+                
+            </array>
+        </dict>
+
+        <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>CFBundleURLName</key>
+        <string>qrated.com</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+        <string>qrated</string>
+        </array>
+        </dict>
+    </array>
+    <key>FlutterDeepLinkingEnabled</key>
+    <true/>
+
+
 	<key>CFBundleVersion</key>
 	<string>$(FLUTTER_BUILD_NUMBER)</string>
-	<key>FlutterDeepLinkingEnabled</key>
-	<true/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+
+
+	<key>internet</key>
+      <string>Please check you have wifi or data enabled.</string>
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>fetch</string>
+        <string>remote-notification</string>
+    </array>
+
+
 	<key>UILaunchStoryboardName</key>
-	<string></string>
+	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>UIRequiresFullScreen</key>
-	<false/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
+		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>internet</key>
-	<string>Please check you have wifi or data enabled.</string>
+
 </dict>
 </plist>

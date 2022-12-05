@@ -45,7 +45,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
         title: Text(
           'Welcome back!',
           style: FlutterFlowTheme.of(context).title2.override(
-                fontFamily: 'Poppins',
+                fontFamily: 'Outfit',
                 color: Colors.white,
                 fontSize: 22,
               ),
@@ -224,7 +224,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                     height: 40,
                     color: FlutterFlowTheme.of(context).primaryColor,
                     textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Roboto Mono',
                           color: Colors.white,
                         ),
                     borderSide: BorderSide(
@@ -272,7 +272,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                     height: 40,
                     color: FlutterFlowTheme.of(context).primaryColor,
                     textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Roboto Mono',
                           color: Colors.white,
                         ),
                     borderSide: BorderSide(
@@ -300,7 +300,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                   height: 40,
                   color: FlutterFlowTheme.of(context).primaryColor,
                   textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Roboto Mono',
                         color: Colors.white,
                       ),
                   borderSide: BorderSide(

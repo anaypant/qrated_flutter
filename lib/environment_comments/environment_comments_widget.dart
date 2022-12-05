@@ -50,7 +50,7 @@ class _EnvironmentCommentsWidgetState extends State<EnvironmentCommentsWidget> {
             'Comments:',
             textAlign: TextAlign.start,
             style: FlutterFlowTheme.of(context).title2.override(
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Outfit',
                   color: Colors.white,
                   fontSize: 22,
                 ),
@@ -130,7 +130,7 @@ class _EnvironmentCommentsWidgetState extends State<EnvironmentCommentsWidget> {
                           fillColor: Color(0xFFBBFFE7),
                         ),
                         style: FlutterFlowTheme.of(context).bodyText1.override(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Roboto Mono',
                               color: Colors.black,
                             ),
                       ),
@@ -216,7 +216,7 @@ class _EnvironmentCommentsWidgetState extends State<EnvironmentCommentsWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText1
                                           .override(
-                                            fontFamily: 'Poppins',
+                                            fontFamily: 'Roboto Mono',
                                             color: Colors.black,
                                           ),
                                     ),
@@ -233,7 +233,7 @@ class _EnvironmentCommentsWidgetState extends State<EnvironmentCommentsWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText1
                                           .override(
-                                            fontFamily: 'Poppins',
+                                            fontFamily: 'Roboto Mono',
                                             color: Colors.black,
                                           ),
                                     ),

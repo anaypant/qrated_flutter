@@ -56,7 +56,7 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
         title: Text(
           'Hey There!',
           style: FlutterFlowTheme.of(context).title2.override(
-                fontFamily: 'Poppins',
+                fontFamily: 'Outfit',
                 color: Colors.white,
                 fontSize: 22,
               ),
@@ -429,7 +429,7 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                     height: 40,
                     color: FlutterFlowTheme.of(context).primaryColor,
                     textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Roboto Mono',
                           color: Colors.white,
                         ),
                     borderSide: BorderSide(
@@ -468,7 +468,7 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                       child: Text(
                     'I agree to the Qrated',
                     style: FlutterFlowTheme.of(context).bodyText1.override(
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Roboto Mono',
                           color: Colors.black,
                         ),
                   )),
@@ -488,7 +488,7 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                           color: FlutterFlowTheme.of(context).primaryColor,
                           textStyle:
                               FlutterFlowTheme.of(context).subtitle2.override(
-                                    fontFamily: 'Poppins',
+                                    fontFamily: 'Roboto Mono',
                                     color: Colors.white,
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold,
@@ -521,7 +521,7 @@ class _SignUpPageWidgetState extends State<SignUpPageWidget> {
                   height: 40,
                   color: FlutterFlowTheme.of(context).primaryColor,
                   textStyle: FlutterFlowTheme.of(context).subtitle2.override(
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Roboto Mono',
                         color: Colors.white,
                       ),
                   borderSide: BorderSide(
